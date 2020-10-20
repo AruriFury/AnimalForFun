@@ -3,6 +3,7 @@ package comscisdu.pichisnee.animalforfun;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -42,6 +43,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-}
+
+    public void  clickFB(View view) {
+        Intent fbIntent = new Intent(Intent.ACTION_VIEW);
+        fbIntent.setData(Uri.parse("https://www.facebook.com/beaching.01/"));
+        startActivity(fbIntent);
+
+    }//end ClickFB Method
+}//end class
 
 

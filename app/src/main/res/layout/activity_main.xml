@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="clickFB"
     tools:context=".MainActivity">
 
     <TextView
@@ -70,6 +71,7 @@
         android:id="@+id/imvfb"
         android:layout_width="99dp"
         android:layout_height="60dp"
+        android:onClick="clickFB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.9"
