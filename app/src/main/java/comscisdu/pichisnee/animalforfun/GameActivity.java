@@ -29,6 +29,7 @@ public class GameActivity extends AppCompatActivity {
     ArrayList<Integer> qID = new ArrayList<Integer>();
     MediaPlayer mediaPlayer;
     Integer score = 0;
+    String nameString;
 
     @Override
 
@@ -197,7 +198,7 @@ public class GameActivity extends AppCompatActivity {
 
         }
         if (qID == 10) {
-            answer = "สิงโต000";
+            answer = "สิงโต";
             questionImageView.setImageResource(R.drawable.lion);
             mediaPlayer = MediaPlayer.create(this, R.raw.lion );
             ArrayList<String> choice = new ArrayList<String>();
@@ -234,9 +235,13 @@ public class GameActivity extends AppCompatActivity {
     }//end choiceAns Method
 
     private void dialogboxScore() { //เป็น Method แสดงคะแนน
+        //รับค่า nameSting จากหน้า MainActivity
+        nameString = getIntent().getStringExtra("Name");
+
+        //สร้าง dialogbox สรุปคะแนน
         AlertDialog.Builder builder = new AlertDialog.Builder( this);
         builder.setTitle("สรุปคะแนน");
-        builder.setMessage("คุณได้ " + score + " คะแนน")
+        builder.setMessage(nameString + "ได้ " + score + " คะแนน")
                 .setCancelable(false)
                 .setPositiveButton("เล่นอีกครั้ง", new DialogInterface.OnClickListener() {
                     @Override
