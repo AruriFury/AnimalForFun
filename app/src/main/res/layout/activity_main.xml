@@ -60,11 +60,22 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
         android:text="start game"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtName"
-        app:layout_constraintVertical_bias="0.23000002" />
+        app:layout_constraintTop_toBottomOf="@+id/edtName" />
+
+    <ImageView
+        android:id="@+id/imvfb"
+        android:layout_width="99dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btStart"
+        app:layout_constraintVertical_bias="0.76"
+        app:srcCompat="@drawable/fbi" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
